@@ -1,12 +1,10 @@
-import './App.scss'
+import './App.scss';
+import { AppRouter } from './AppRouter';
 
 function App() {
 
   return (
-    <>
-      <h1>Pokedex App</h1>
-      
-    </>
+    <AppRouter/>
   )
 }
 
