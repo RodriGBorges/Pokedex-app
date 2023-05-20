@@ -1,0 +1,86 @@
+@font-face {
+  font-family: 'Comical';
+  src: url("./fonts/LTComical.ttf");
+}
+
+@font-face {
+  font-family: 'ShareDong';
+  src: url("./fonts/ShareDong.ttf");
+}
+
+html {
+  font-family: "Comical";
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+}
+
+header .logo img {
+  width: 150px;
+  margin-right: 20px;
+}
+
+header form.header-form {
+  display: flex;
+  align-items: center;
+}
+
+header div.form-group {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border: 1px solid black;
+  padding: 10px 15px;
+  border-radius: 25px 0px 0px 25px;
+}
+
+header div.form-group input {
+  width: 100px;
+  height: 21px;
+  border: none;
+  outline: none;
+  font-size: 15px;
+}
+
+header svg.icon-search {
+  width: 20px;
+  height: 20px;
+  stroke: white;
+}
+
+header form.header-form button.btn-search {
+  border: none;
+  outline: none;
+  background-color: black;
+border-radius: 0px 10px 10px 0px;
+padding: 10px;
+color: #fff;
+cursor: pointer;
+font-weight: 500;
+}
+
+header form.header-form button.btn-search:hover {
+  background-color: aqua;
+}
+
+@media (min-width: 425px) {
+
+  
+
+}
+
+@media (min-width: 768px) {
+
+  
+
+}
