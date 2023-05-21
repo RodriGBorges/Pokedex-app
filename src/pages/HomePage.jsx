@@ -1,9 +1,10 @@
-import React from 'react'
+import React from 'react';
+import { PokemonList } from '../components';
 
 export const HomePage = () => {
   return (
     <section className='section-home'>
-					<span>Home page</span>
-			</section>
+					<PokemonList />
+		</section>
   )
 }
