@@ -1,6 +1,6 @@
 import React from 'react';
 import { Navigate, Route, Routes } from 'react-router-dom';
-import { Navigation } from './components/Navigation/Navigation';
+import { Navigation } from './components/Navigation';
 import { PokemonPage, HomePage, SearchPage } from './pages';
 
 export const AppRouter = () => {

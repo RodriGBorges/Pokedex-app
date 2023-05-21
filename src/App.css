@@ -8,7 +8,38 @@
   src: url("./fonts/ShareDong.ttf");
 }
 
-html {
+:root {
+  --type-fire: #ff7402;
+	--type-grass: #9bcc50;
+	--type-steel: #9eb7b8;
+	--type-water: #4592c4;
+	--type-psychic: #f366b9;
+	--type-ground: #ab9842;
+	--type-ice: #51c4e7;
+	--type-flying: #3dc7ef;
+	--type-ghost: #4d5b64;
+	--type-normal: #a4acaf;
+	--type-poison: #7e0058;
+	--type-rock: #a38c21;
+	--type-fighting: #d56723;
+	--type-dark: #707070;
+	--type-bug: #729f3f;
+	--type-dragon: linear-gradient(180deg, #53a4cf 50%, #f16e57 50%);
+	--type-electric: #bba909;
+	--type-fairy: #fdb9e9;
+	--type-shadow: #7b62a3;
+	--type-unknow: #757575;
+
+  --color1: #102A62;
+  --color2: #0472BD;
+  --color3: #ffcd01;
+  --color-black: #000000;
+  --color-white: #fff;
+  
+
+}
+
+body {
   font-family: "Comical";
 }
 
@@ -18,59 +49,104 @@ html {
   box-sizing: border-box;
 }
 
+/* HEADER */
+
 header {
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 10px;
+  box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, .5);
+  user-select: none;
 }
 
 header .logo img {
   width: 150px;
   margin-right: 20px;
+  cursor: pointer;
 }
 
-header form.header-form {
+
+
+/* bttn filter */
+header div.icon-container {
+	cursor: pointer;
+  width: 30px;
+  height: 30px;
+}
+
+header div.icon-container svg.icon {
+	width: 30px;
+	height: 30px;
+	stroke: var(--color-black);
+  border-radius: 5px;
+}
+
+header div.icon-container svg.icon:hover {
+  box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, .5);
+  border-left: none;
+  transition: all .2s;
+}
+
+aside.aside-toggleMenu {
+  display: none;
+  flex-direction: column;
+  position: absolute;
+  top: 86px;
+  left: 0px;
+  background-color: var(--color-white);
+  padding: 10px;
+}
+
+aside.menuActive {
+  display: flex;
+}
+
+aside.aside-toggleMenu form.header-form {
   display: flex;
   align-items: center;
 }
 
-header div.form-group {
+aside.aside-toggleMenu div.form-group {
   display: flex;
   align-items: center;
-  gap: 10px;
-  border: 1px solid black;
-  padding: 10px 15px;
-  border-radius: 25px 0px 0px 25px;
 }
 
-header div.form-group input {
-  width: 100px;
-  height: 21px;
-  border: none;
+aside.aside-toggleMenu div.form-group input {
+  width: 120px;
+  height: 43px;
+  border: 1px solid var(--color-black);
   outline: none;
   font-size: 15px;
+  padding-left: 5px;
+  border-radius: 10px 0px 0px 10px;
 }
 
-header svg.icon-search {
+aside.aside-toggleMenu div.form-group input:focus {
+  border: 2px solid var(--color-black);
+  transition: all .2s;
+}
+
+aside.aside-toggleMenu svg.icon-search {
   width: 20px;
   height: 20px;
-  stroke: white;
+  stroke: var(--color-white);
 }
 
-header form.header-form button.btn-search {
+aside.aside-toggleMenu form.header-form button.btn-search {
   border: none;
   outline: none;
-  background-color: black;
-border-radius: 0px 10px 10px 0px;
-padding: 10px;
-color: #fff;
-cursor: pointer;
-font-weight: 500;
+  background-color: var(--color-black);
+  border-radius: 0px 10px 10px 0px;
+  padding: 10px;
+  color: var(--color-white);
+  cursor: pointer;
 }
 
-header form.header-form button.btn-search:hover {
-  background-color: aqua;
+aside.aside-toggleMenu form.header-form button.btn-search:hover {
+  box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, .5);
+  border-left: none;
+  transition: all .2s;
 }
 
 @media (min-width: 425px) {
