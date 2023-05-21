@@ -2,6 +2,6 @@ import React from 'react'
 
 export const PokemonPage = () => {
   return (
-    <div>PokemonPage</div>
+    <div>PokemonPage in progress</div>
   )
 }
