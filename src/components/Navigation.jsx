@@ -74,5 +74,5 @@ export const Navigation = () => {
       </aside>
       <Outlet />
     </>
-  )
-}
+  );
+};
