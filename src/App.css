@@ -255,6 +255,12 @@ article.pokemonCard div.imgContainer img:hover {
   overflow: hidden;
 }
 
+/* busqueda */
+
+h2.found {
+  max-width: 1024px;
+  margin: 15px auto;
+}
 
 
 /* icons */

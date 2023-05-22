@@ -1,5 +1,5 @@
 import React, { useContext, useState } from 'react';
-import { Link, Outlet } from 'react-router-dom';
+import { Link, Outlet, useNavigate } from 'react-router-dom';
 import { PokemonContext } from '../context/PokemonContext';
 import { PokemonFilter } from './PokemonFilter';
 
@@ -11,7 +11,16 @@ export const Navigation = () => {
     setActive(!active);
   };
 
-  const {} = useContext(PokemonContext);
+  const navigate = useNavigate();
+
+  const { onInputChange, valueSearch, onResetForm } = useContext(PokemonContext);
+  const onSearchSubmit = (e) => {
+    e.preventDefault();
+    navigate('/search', {
+      state: valueSearch
+    });
+    onResetForm();
+  };
 
   return (
     <>
@@ -45,13 +54,15 @@ export const Navigation = () => {
         </div>
       </header>
       <aside className={`aside-toggleMenu ${active ? 'menuActive' : ''}`} >
-        <form className='header-form'>
+        <form className='header-form' onSubmit={onSearchSubmit}>
             <div className='form-group'>
                 
                 <input
                 type='search'
                 name='valueSearch'
                 id=''
+                value={valueSearch}
+                onChange={onInputChange}
                 placeholder='Buscar nombre de pokemon'
                 />
             </div>
