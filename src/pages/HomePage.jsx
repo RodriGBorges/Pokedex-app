@@ -4,6 +4,7 @@ import { PokemonContext } from '../context/PokemonContext';
 
 export const HomePage = () => {
 
+  //cargar +50 pokemons
   const { loadMore } = useContext(PokemonContext);
 
   return (

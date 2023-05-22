@@ -4,7 +4,7 @@ import { PokemonTypeIcon } from './PokemonTypeIcon';
 import keygen from 'keygenerator';
 
 export const PokemonCard = ({ pokemon }) => {
-
+  //Traemos al pokemon por props, keygenerator para identificar que pokemon lleva tal icono
   return (
     <article className='pokemonCard'>
         <div className='infoNameType'>

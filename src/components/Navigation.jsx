@@ -6,13 +6,14 @@ import { PokemonFilter } from './PokemonFilter';
 
 export const Navigation = () => {
 
+  //Función del aside oculto para filtrar y buscar pokemones
   const [active, setActive] = useState(false);
   const handleClick = () => {
     setActive(!active);
   };
 
+  //Navigate para saber que se busca por params, el resultado se guarda en state, renderiza searchPage y resetea el form
   const navigate = useNavigate();
-
   const { onInputChange, valueSearch, onResetForm } = useContext(PokemonContext);
   const onSearchSubmit = (e) => {
     e.preventDefault();

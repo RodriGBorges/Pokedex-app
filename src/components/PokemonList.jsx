@@ -4,10 +4,9 @@ import { PokemonCard } from './PokemonCard';
 import { LoadingSpin } from '../layouts/LoadingSpin';
 
 export const PokemonList = () => {
-
-    const { limitPokemons, loading } = useContext(PokemonContext);
-
-
+    //Pokemones con límite(50), loading de cargando data y pokemones filtrados de los checkboxs
+    const { limitPokemons, loading, filteredPokemons } = useContext(PokemonContext);
+    //loading => desde que hace el pedido de la data hasta que termina aparece el cargando...
   return (
     <>
       {
@@ -15,9 +14,21 @@ export const PokemonList = () => {
           <LoadingSpin />
           ) : (
           <div className='pokemonsContainer'>
-              {limitPokemons.map(pokemon => (
-              <PokemonCard pokemon={pokemon} key={pokemon.id} />
-              ))}
+            {
+              filteredPokemons.length ? (
+                <>
+                  {filteredPokemons.map(pokemon => (
+                    <PokemonCard pokemon={pokemon} key={pokemon.id} />
+                    ))}
+                </>
+              ) : (
+                <>
+                  {limitPokemons.map(pokemon => (
+                  <PokemonCard pokemon={pokemon} key={pokemon.id} />
+                  ))}
+                </>
+              )
+            }
           </div>
           )}
     </>

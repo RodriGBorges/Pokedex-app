@@ -5,10 +5,13 @@ import { PokemonCard } from '../components/PokemonCard';
 
 export const SearchPage = () => {
 
+  //recibimos de location el state que enviamos en navigation
   const location = useLocation();
 
+  //pedido de todos los pokemons
   const { allPokemons } = useContext(PokemonContext);
 
+  //filtrado por params
   const pokemons = allPokemons.filter(pokemon => pokemon.name.includes(location.state.toLowerCase()));
 
   return (

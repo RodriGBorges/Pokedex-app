@@ -85,9 +85,6 @@ header .logo img {
   cursor: pointer;
 }
 
-
-
-/* bttn filter */
 header div.icon-container {
 	cursor: pointer;
   width: 30px;
@@ -104,22 +101,24 @@ header div.icon-container svg.icon {
 header div.icon-container svg.icon:hover {
   box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, .5);
   border-left: none;
-  transition: all .2s;
+  transition: all 200ms;
 }
 
+//aside oculto
 aside.aside-toggleMenu {
-  display: none;
+  display: fixed;
   flex-direction: column;
   position: absolute;
   top: 86px;
-  left: 0px;
+  left: -300px;
   background-color: rgba(255, 255, 255, .9);
   padding: 10px;
   width: 200px;
+  transition: all 0.3s linear;
 }
 
 aside.menuActive {
-  display: flex;
+  left: 0;
 }
 
 aside.aside-toggleMenu form.header-form {
@@ -145,7 +144,7 @@ aside.aside-toggleMenu div.form-group input {
 
 aside.aside-toggleMenu div.form-group input:focus {
   border: 2px solid var(--color-black);
-  transition: all .2s;
+  transition: all 200ms;
 }
 
 aside.aside-toggleMenu svg.icon-search {
@@ -167,7 +166,7 @@ aside.aside-toggleMenu form.header-form button.btn-search {
 aside.aside-toggleMenu form.header-form button.btn-search:hover {
   box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, .5);
   border-left: none;
-  transition: all .2s;
+  transition: all 200ms;
 }
 
 aside.menuActive div.container-filters {
@@ -182,17 +181,45 @@ aside.menuActive div.container-filters div.filter-by-type {
 
 aside.menuActive div.container-filters div.filter-by-type div.group-type {
   margin-bottom: 5px;
+  cursor: pointer;
+}
+
+aside.menuActive div.container-filters div.filter-by-type div.group-type input {
+  cursor: pointer;
 }
 
 aside.menuActive div.container-filters div.filter-by-type div.group-type label {
   margin-left: 5px;
+  cursor: pointer;
 }
 
+//home
 section.section-home {
   width: 90%;
   margin: 20px auto;
 }
 
+//boton cargar más
+div.loadMoreContainer {
+  width: 50px;
+  margin: 10px auto;
+}
+
+div.loadMoreContainer button.btnLoadMore {
+  background-color: var(--color-white);
+  border: 1px solid rgba(0, 0, 0, .125);
+  border-radius: 10px;
+  padding: 10px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+div.loadMoreContainer button.btnLoadMore:hover {
+  box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, .5);
+  transition: all 200ms;
+}
+
+//contenedor de cards pokemon
 div.pokemonsContainer {
   width: 100%;
 	display: flex;
@@ -206,6 +233,7 @@ div.pokemonsContainer a.card-pokemon {
   
 }
 
+//cards pokemons
 article.pokemonCard {
   width: 50%;
   border: 1px solid rgba(0, 0, 0, .125);
@@ -272,7 +300,7 @@ h2.found {
 }
 
 
-/* icons */
+/* icons types*/
 
 .type-wrapper {
   width: 800px;
@@ -300,6 +328,7 @@ h2.found {
   }
   margin: 1rem;
 }
+
 .icon {
   display: flex;
   border-radius: 100%;
@@ -456,6 +485,7 @@ h2.found {
 
 }
 
+//spinner cargando...
 .loadingspin{
   display: flex;
   height: 50vh;
@@ -485,7 +515,7 @@ h2.found {
 }
 
 
-
+//animacion spinner cargando
 @keyframes spin {
 0% {
 transform: rotate(0deg);

@@ -2,6 +2,7 @@ import { bug, dark, dragon, electric, fairy, fighting, fire, flying, ghost, gras
 
 export const PokemonTypeIcon = (props) => {
 
+  //iconos de los tipos
   const icons = {electric: electric(), flying: flying(), nature: nature(), fire: fire(), ground: ground(), water: water(), bug: bug(), poison: poison(), normal: normal(), fairy: fairy(), psychic: psychic(), fighting: fighting(), rock: rock(), dark: dark(), steel: steel(), dragon:dragon(), ice: ice(), ghost:ghost(), grass:grass()}
 
   return (
