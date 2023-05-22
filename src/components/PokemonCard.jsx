@@ -26,12 +26,12 @@ export const PokemonCard = ({ pokemon }) => {
         </Link>
         <div className='pokemonStat'>
           <div className='weightContainer'>
-            <h3>Peso: {pokemon.weight} KG</h3>
+            <h3>Peso: {(pokemon.weight * 0.1).toFixed(1)} kg</h3>
           </div>
           <div className='abilitiesContainer'>
             <h3>Habilidades: </h3>
             <div>
-              {pokemon.abilities && pokemon.abilities.map(ability => <h3 key={keygen._()}>{ability.ability.name.toUpperCase()}</h3>)}
+              {pokemon.abilities && pokemon.abilities.map(ability => <h4 key={keygen._()}>{ability.ability.name.toUpperCase()}</h4>)}
             </div>
           </div>
         </div>
