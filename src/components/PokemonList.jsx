@@ -1,18 +1,25 @@
 import React, { useContext } from 'react';
 import { PokemonContext } from '../context/PokemonContext';
 import { PokemonCard } from './PokemonCard';
+import { LoadingSpin } from '../layouts/LoadingSpin';
 
 export const PokemonList = () => {
 
-    const { limitPokemons } = useContext(PokemonContext);
+    const { limitPokemons, loading } = useContext(PokemonContext);
+
 
   return (
     <>
-        <div className='pokemonsContainer'>
-            {limitPokemons.map(pokemon => (
-            <PokemonCard pokemon={pokemon} key={pokemon.id} />
-            ))}
-        </div>
+      {
+        loading ? (
+          <LoadingSpin />
+          ) : (
+          <div className='pokemonsContainer'>
+              {limitPokemons.map(pokemon => (
+              <PokemonCard pokemon={pokemon} key={pokemon.id} />
+              ))}
+          </div>
+          )}
     </>
   );
 };

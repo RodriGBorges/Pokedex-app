@@ -63,9 +63,13 @@ export const PokemonProvider = ({children}) => {
         return data;
     };
 
+    const loadMore = () => {
+        setOffset(offset + 50)
+    };
+
     useEffect(() => {
         getLimitPokemons();
-    }, []);
+    }, [offset]);
 
     useEffect(() => {
         getAllPokemons();
@@ -79,7 +83,12 @@ export const PokemonProvider = ({children}) => {
         onResetForm,
         allPokemons,
         limitPokemons,
-        getPokemonById
+        getPokemonById,
+        loadMore,
+        loading,
+        setLoading,
+        active,
+        setActive
     }}>
         {children}
     </PokemonContext.Provider>
